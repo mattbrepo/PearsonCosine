@@ -4,25 +4,22 @@ import matplotlib.pyplot as plt
 from scipy.stats import pearsonr
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Generate random values from 0 to 3
 np.random.seed(42)
-n = 100  # Size of the dataset
+n = 100
 set1 = np.random.randint(0, 4, n)
 
-# Define offset range
 offset_range = np.arange(-50, 51, 1)
 pearson_values = []
 cosine_values = []
 
-# Simulate correlation with different offsets
 for offset in offset_range:
     set2 = set1 + offset
     
-    # Compute Pearson correlation
+    # Pearson correlation
     pearson_corr, _ = pearsonr(set1, set2)
     pearson_values.append(pearson_corr)
     
-    # Compute Cosine similarity
+    # Cosine similarity
     cosine_sim = cosine_similarity([set1], [set2])[0, 0]
     cosine_values.append(cosine_sim)
 
