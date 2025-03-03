@@ -10,5 +10,5 @@ A simple Simulation of Pearson correlation and Cosine similarity suggested in th
 
 ## Example
 
-![Example](/images/plot1.jpg)
+![Example](/images/plot1.png)
 
